@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gamer Master Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Pantalla de inicio -->
+    <section id="start-screen" class="card">
+      <h1>🎮 Gamer Master Quiz</h1>
+      <p class="description">
+        Pon a prueba tus conocimientos sobre los videojuegos más icónicos:
+        Gears of War, Halo, Fortnite, GTA 5, GTA 6 y más.
+      </p>
+      <ul class="details">
+        <li>📝 15 preguntas de opción múltiple</li>
+        <li>⏱️ 60 segundos por pregunta</li>
+        <li>❌ Si se agota el tiempo, pierdes 1 punto</li>
+        <li>✅ Retroalimentación inmediata</li>
+      </ul>
+      <button id="start-btn" class="btn-primary">▶ Iniciar Quiz</button>
+    </section>
+
+    <!-- Pantalla de pregunta -->
+    <section id="quiz-screen" class="card hidden">
+      <div class="progress-info">
+        <span id="question-counter">Pregunta 1 / 15</span>
+        <span id="game-badge" class="badge">Juego</span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+
+      <div class="timer">
+        <span>⏱️ Tiempo:</span>
+        <span id="timer-text">60s</span>
+      </div>
+
+      <h2 id="question-text">Pregunta</h2>
+      <div id="options-container" class="options"></div>
+
+      <div id="feedback" class="feedback hidden"></div>
+
+      <button id="next-btn" class="btn-primary hidden">Siguiente Pregunta →</button>
+    </section>
+
+    <!-- Pantalla de resultados -->
+    <section id="result-screen" class="card hidden">
+      <h2>Resultados Finales</h2>
+      <p id="result-message" class="result-message"></p>
+
+      <div class="score-grid">
+        <div class="score-box">
+          <span id="final-score">0</span>
+          <small>Puntuación</small>
+        </div>
+        <div class="score-box">
+          <span id="correct-count">0</span>
+          <small>Correctas</small>
+        </div>
+        <div class="score-box">
+          <span id="accuracy">0%</span>
+          <small>Precisión</small>
+        </div>
+      </div>
+
+      <div id="summary-list" class="summary-list"></div>
+
+      <button id="restart-btn" class="btn-primary">🔄 Jugar de Nuevo</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
